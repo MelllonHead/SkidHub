@@ -11,10 +11,6 @@ b:Label("Pretty Useless NGL",{
     
 }) 
 
-b:Button("Control",function()
-    
-end)
-
 b:Button("Control",function ()
     game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-453.564392, 797.066772, 40.6949959, 0.965929627, -0.258804798, 0, 0.258804798, 0.965929627, 0, 0, 0, 1)
 end)
