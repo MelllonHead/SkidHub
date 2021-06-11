@@ -1,0 +1,97 @@
+local library = loadstring(game:HttpGet(('https://raw.githubusercontent.com/AikaV3rm/UiLib/master/Lib.lua')))()
+
+local w = library:CreateWindow("DMR Tele") -- Creates the window
+
+local b = w:CreateFolder("Teleports") -- Creates the folder(U will put here your buttons,etc)
+
+b:Label("Pretty Useless NGL",{
+    TextSize = 25; -- Self Explaining
+    TextColor = Color3.fromRGB(255,255,255); -- Self Explaining
+    BgColor = Color3.fromRGB(69,69,69); -- Self Explaining
+    
+}) 
+
+b:Button("Control",function()
+    
+end)
+
+b:Button("Control",function ()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-453.564392, 797.066772, 40.6949959, 0.965929627, -0.258804798, 0, 0.258804798, 0.965929627, 0, 0, 0, 1)
+end)
+
+b:Button("Tart",function ()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(360.67746, 1736.80164, 271.137512, 0, 0, -1, 0, 1, 0, 1, 0, 0)
+end)
+
+b:Button("Coolant",function ()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(363.324188, 974.409546, -74.1568909, 1, 0, 0, 0, 1, 0, 0, 0, 1)
+end)
+
+b:Button("Hadron",function ()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(873.799561, 1170.50696, -85.8228836, 1, 0, 0, 0, 1, 0, 0, 0, 1)
+end)
+
+b:Button("Turbines",function ()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(193.920609, 565.249451, 195.907761, 1, 0, 0, 0, 1, 0, 0, 0, 1)
+end)
+
+b:Button("DMR",function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-375.773407, 696.653564, 65.5132446, 0.467854589, 3.47302134e-08, 0.883805454, -1.79382589e-08, 1, -2.98003577e-08, -0.883805454, -1.91169724e-09, 0.467854589)
+    wait()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-441.758575, 696.653076, 36.7559967, 0.179298058, 1.34587985e-08, 0.983794808, 1.12010873e-07, 1, -3.409464e-08, -0.983794808, 1.16308811e-07, 0.179298058)
+end)
+
+
+b:Toggle("Toggle",function(bool)
+    shared.toggle = bool
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-327.204803, 806.018921, 87.8063049, 1, 0, 0, 0, 1, 0, 0, 0, 1)
+end)
+
+b:Slider("Slider",{
+    min = 10; -- min value of the slider
+    max = 50; -- max value of the slider
+    precise = true; -- max 2 decimals
+},function(value)
+    print(value)
+end)
+
+b:Dropdown("Dropdown",{"A","B","C"},true,function(mob) --true/false, replaces the current title "Dropdown" with the option that t
+    print(mob)
+end)
+
+b:Bind("Bind",Enum.KeyCode.C,function() --Default bind
+    print("Yes")
+end)
+
+b:ColorPicker("ColorPicker",Color3.fromRGB(255,0,0),function(color) --Default color
+    print(color)
+end)
+
+b:Box("Box","number",function(value) -- "number" or "string"
+    print(value)
+end)
+
+b:DestroyGui()
+
+--[[
+How to refresh a dropdown:
+1)Create the dropdown and save it in a variable
+local yourvariable = b:Dropdown("Hi",yourtable,function(a)
+    print(a)
+end)
+2)Refresh it using the function
+yourvariable:Refresh(yourtable)
+How to refresh a label:
+1)Create your label and save it in a variable
+local yourvariable = b:Label("Pretty Useless NGL",{
+    TextSize = 25; -- Self Explaining
+    TextColor = Color3.fromRGB(255,255,255);
+    BgColor = Color3.fromRGB(69,69,69);
+})
+2)Refresh it using the function
+yourvariable:Refresh("Hello") It will only change the text ofc
+]]
+
+function Control()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-327.204803, 806.018921, 87.8063049, 1, 0, 0, 0, 1, 0, 0, 0, 1) 
+end
